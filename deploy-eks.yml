@@ -1,0 +1,17 @@
+---
+- name: Deploy app to EKS
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Apply Deployment to EKS
+      k8s:
+        kubeconfig: ~/.kube/config
+        state: present
+        src: deployment.yml
+
+    - name: Apply Service to EKS
+      k8s:
+        kubeconfig: ~/.kube/config
+        state: present
+        src: service.yml
