@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'srivyshnavip/bms:latest'
         AWS_REGION = 'ap-south-1'
-        EKS_CLUSTER_NAME = 'vishnu-eks'
+        EKS_CLUSTER_NAME = 'vishnus-eks'
     }
 
     stages {
